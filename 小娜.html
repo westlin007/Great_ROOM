@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱你的小娜</title>
+</head>
+<body>
+    
+</body>
+<script>
+    while(true){
+        var msg=prompt("您好！我是亲爱的小娜~~~ \n"+
+        "求和请输入“1”或“求和”\n"+
+        "获取时间请输入“2”或“时间”\n"+
+        "想听笑话请输入“3”或“笑话”\n"+
+        "退出请输入“q”");
+        
+        //输入“q”退出
+        if(msg==="q"){                  
+            alert("您已经不爱小娜了吗？");
+            break;
+        }
+        
+        switch(msg){
+            
+            // 输入“1”或“求和”计算过输入数字的和
+            case ("1"):
+            case ("求和"):
+                var numbers=prompt("请输入要计算的数字，用逗号隔开，例如：1,2,3,4");
+                var arr=numbers.split(",");
+                var sum=0;
+                for(i=0; i<arr.length; i++){
+                    sum+=parseFloat(arr[i]);
+                }
+                alert("您输入的数字总和为；"+sum);
+                break;
+
+            // 输入“2”或“时间” 获取当前时间
+            case "2":
+            case "时间":
+                var date=new Date();
+                var year=date.getFullYear();
+                var month=date.getMonth()+1;
+                var day=date.getDate();
+                var hours=date.getHours();
+                var minutes=date.getMinutes();
+                var seconds=date.getSeconds();
+                month=month<10 ? "0"+month : month;
+                day=day<10? "0"+day : day;
+                hours=hours<10? "0" +hours : hours;
+                minutes=minutes<10? "0"+minutes : minutes;
+                seconds=seconds<10? "0"+seconds : seconds;
+                alert("当前时间为； "+year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds);
+                break;
+            
+            //输入“3“或“笑话”获取笑话
+            case "3":
+            case "笑话":
+                var joke=['你是个笑话','你就是个笑话','你还是个笑话','你tm就是个笑话'];
+                var r=Math.floor(Math.random()*joke.length);
+                alert(joke[r]);
+                break;
+            
+            //输入其他或取消的结果
+            default:
+                alert("我不听！我不听！！！");
+                break;
+        }
+        
+        
+
+        
+
+    }
+
+
+</script>
+</html>

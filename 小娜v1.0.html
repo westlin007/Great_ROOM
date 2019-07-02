@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 封装小娜
+    function XiaoNa() {
+        this.ask = function () {
+            var msg = prompt('请输入数字或者关键字\n输入“1”或者“总和”求总和\n输入“2”或者“时间”获取现在的时间\n输入“3”或者“笑话”获取笑话，\n输入q退出');
+            return msg;
+        }
+        // 求和
+        this.calculate = function () {
+            var numbers = prompt('请输入求和的数字，用英文逗号隔开');
+            // 把输入的内容用逗号分割
+            var arr = numbers.split(',');
+            // 求和
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += parseFloat(arr[i]);
+            }
+            alert(sum);
+        }
+        // 获取当前日期
+        this.getDate = function () {
+            var date = new Date();
+            var y = date.getFullYear();
+            var M = date.getMonth() + 1;
+            var d = date.getDate();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            M = M < 10 ? '0' + M : M;
+            d = d < 10 ? '0' + d : d;
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            var time = y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s;
+            alert(time);
+        }
+        // 笑话
+        this.Joke = function () {
+            var jokes = ['你是个笑话', '你就是个笑话', '你还是个笑话', '你tm就是个笑话'];
+            var r = Math.floor(Math.random() * jokes.length);
+            alert(jokes[r]);
+        }
+    }
+
+    // 创建一个小娜的对象
+    var xiaona = new XiaoNa();
+    while (true) {
+        // 提示输入
+        var msg = xiaona.ask();
+        // 退出
+        if (msg == 'q') {
+            break;
+        }
+
+        switch (msg) {
+            // 输入1或总和来求和
+            case '1':
+            case '总和':
+                xiaona.calculate();
+                break;
+            // 输入2或时间来获取当前时间
+            case '2':
+            case '时间':
+                // 找小娜计算当前的日期
+                xiaona.getDate();
+                break;
+            // 输入3或笑话来获取笑话
+            case '3':
+            case '笑话':
+                xiaona.Joke();
+                break;
+            // 其他情况时显示我不听！
+            default:
+                alert('我不听！我不听！')
+                break;
+        }
+    }
+</script>
+
+</html>
