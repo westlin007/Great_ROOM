@@ -1,0 +1,274 @@
+@import "./base.less";
+
+.view{
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    .hotel,
+    .ticket,
+    .travel
+    {
+        display: flex;
+        background: #fa7f50;
+        border-radius: 5px;
+        height: 90px;
+        color: #fff;
+        margin: 5px 0;
+        font-size: 14px;
+        >a{
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            span{
+                &:nth-child(2){
+                    width: 43px;
+                    height: 43px;
+                    background: url("../images/un_ico_home_v620.png") no-repeat 0 -260px/2;
+                    background-size: 208px/2 655px/2;
+                }
+            }
+        }
+        .hotel_options,
+        .ticket_options,
+        .travel_options{
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px solid #fff;
+                &:nth-child(-n+2) {
+                    border-bottom: 1px solid #fff;
+                }   
+            }
+        }
+    }
+    .ticket{
+        background: #3d98ff;
+        >a {
+           span {
+               &:nth-child(2) {
+                    background-position: 0 -295px;
+               }
+           }
+        }
+    }
+    .travel{
+        background: #44c522;
+        >a{
+            span{
+                &:nth-child(2){
+                    background-position: 0 -480px/2;
+                }
+            }
+        }
+    }
+    nav{
+        display: flex;
+        border: 1px solid #ccc;
+        flex-wrap: wrap;
+        border-radius: 5px;
+        a{
+            display: flex;
+            width: 20%;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            padding: 5px;
+            span{
+                &:nth-child(1){
+                    width: 28px;
+                    height: 28px;
+                    background: url("../images/un_ico_subnav_v7.124@2x.png") no-repeat 0 6px;
+                    background-size: 24px;
+                }
+            }
+            &:nth-child(2){
+                span{
+                    &:nth-child(1){
+                        background-position: 6px -20px;
+                    }
+                }
+            }
+        }   
+    }
+
+    // 特卖汇样式
+    .temai{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px 0;
+        padding: 5px;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            
+            h3{
+                font-style: italic;
+                color: #fd3c52;
+                font-size: 16px;
+            }
+            a{
+                background-image: linear-gradient(to right, blue,red);
+                border-radius: 10px;
+                font-size: 12px;
+                color: #fff;
+                padding: 2px 8px;                
+            }
+        }   
+        .content{
+            display: flex;
+            margin-top: 5px;
+            >a{
+                flex:1;
+                img{
+                    width: 100%;
+                }
+                p{
+                    height: 42px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .price{
+                    span{
+                        &:nth-child(1){
+                            color: #fe4f5e;
+                        }
+                        &:nth-child(2){
+                            background: #fd3a51;
+                            border-radius: 8px;
+                            color: #fff;
+                            font-size: 12px;
+                            padding: 0 5px;
+                        }
+                    }
+                }
+            }
+            .content_right{
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1;
+                a{
+                    &:nth-child(1){
+                        width: 100%;
+                        height: 50%;
+                        background: url(../images/pic-tmh-02.png) no-repeat right bottom, #f9f9f9;
+                        background-size: 53.5px 71px;
+                        padding: 10px 0 0 10px;
+                        margin-bottom: 5px;
+                        h4{
+                            color: #fd3a51;
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                    &:nth-child(2){
+                        height: 50%;
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-left: 5px solid #fff;
+                        background: #f9f9f9;
+                        h4{
+                            color: #6aabff;
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                        img{
+                            width: 50px;
+                            height: 35px;
+                        }
+                    } 
+                    &:nth-child(3){
+                        height: 50%;
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-left: 5px solid #fff;
+                        background: #f9f9f9;
+                        h4{
+                            color: #68d2bc;
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                        img{
+                            width: 50px;
+                            height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+
+    // 活动样式
+    .active{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;;
+        .active_title{
+            display: flex;
+            justify-content: space-between;     
+            h3{
+                color: #ffa500;
+                font-style: italic;
+                font-size: 16px;
+            }
+            a{
+                background-image: linear-gradient(to right, blue,red);
+                border-radius: 10px;
+                font-size: 12px;
+                color: #fff;
+                padding: 2px 8px;
+            }
+        }
+        .active_content{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;  
+            a{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // 页尾
+    footer{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px 0 ;
+        .tel{
+            display: flex;
+            a{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .footer_nav,
+        .copyrigh{
+            text-align: center;
+        }
+    }
+}

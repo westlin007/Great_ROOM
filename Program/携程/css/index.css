@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.view {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+.view .hotel,
+.view .ticket,
+.view .travel {
+  display: flex;
+  background: #fa7f50;
+  border-radius: 5px;
+  height: 90px;
+  color: #fff;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.view .hotel > a,
+.view .ticket > a,
+.view .travel > a {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+.view .hotel > a span:nth-child(2),
+.view .ticket > a span:nth-child(2),
+.view .travel > a span:nth-child(2) {
+  width: 43px;
+  height: 43px;
+  background: url("../images/un_ico_home_v620.png") no-repeat 0 -130px;
+  background-size: 104px 327.5px;
+}
+.view .hotel .hotel_options,
+.view .ticket .hotel_options,
+.view .travel .hotel_options,
+.view .hotel .ticket_options,
+.view .ticket .ticket_options,
+.view .travel .ticket_options,
+.view .hotel .travel_options,
+.view .ticket .travel_options,
+.view .travel .travel_options {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .hotel .hotel_options a,
+.view .ticket .hotel_options a,
+.view .travel .hotel_options a,
+.view .hotel .ticket_options a,
+.view .ticket .ticket_options a,
+.view .travel .ticket_options a,
+.view .hotel .travel_options a,
+.view .ticket .travel_options a,
+.view .travel .travel_options a {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #fff;
+}
+.view .hotel .hotel_options a:nth-child(-n+2),
+.view .ticket .hotel_options a:nth-child(-n+2),
+.view .travel .hotel_options a:nth-child(-n+2),
+.view .hotel .ticket_options a:nth-child(-n+2),
+.view .ticket .ticket_options a:nth-child(-n+2),
+.view .travel .ticket_options a:nth-child(-n+2),
+.view .hotel .travel_options a:nth-child(-n+2),
+.view .ticket .travel_options a:nth-child(-n+2),
+.view .travel .travel_options a:nth-child(-n+2) {
+  border-bottom: 1px solid #fff;
+}
+.view .ticket {
+  background: #3d98ff;
+}
+.view .ticket > a span:nth-child(2) {
+  background-position: 0 -295px;
+}
+.view .travel {
+  background: #44c522;
+}
+.view .travel > a span:nth-child(2) {
+  background-position: 0 -240px;
+}
+.view nav {
+  display: flex;
+  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+.view nav a {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px;
+}
+.view nav a span:nth-child(1) {
+  width: 28px;
+  height: 28px;
+  background: url("../images/un_ico_subnav_v7.124@2x.png") no-repeat 0 6px;
+  background-size: 24px;
+}
+.view nav a:nth-child(2) span:nth-child(1) {
+  background-position: 6px -20px;
+}
+.view .temai {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
+}
+.view .temai .title {
+  display: flex;
+  justify-content: space-between;
+}
+.view .temai .title h3 {
+  font-style: italic;
+  color: #fd3c52;
+  font-size: 16px;
+}
+.view .temai .title a {
+  background-image: linear-gradient(to right, blue, red);
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 8px;
+}
+.view .temai .content {
+  display: flex;
+  margin-top: 5px;
+}
+.view .temai .content > a {
+  flex: 1;
+}
+.view .temai .content > a img {
+  width: 100%;
+}
+.view .temai .content > a p {
+  height: 42px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.view .temai .content > a .price span:nth-child(1) {
+  color: #fe4f5e;
+}
+.view .temai .content > a .price span:nth-child(2) {
+  background: #fd3a51;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 5px;
+}
+.view .temai .content .content_right {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.view .temai .content .content_right a:nth-child(1) {
+  width: 100%;
+  height: 50%;
+  background: url(../images/pic-tmh-02.png) no-repeat right bottom, #f9f9f9;
+  background-size: 53.5px 71px;
+  padding: 10px 0 0 10px;
+  margin-bottom: 5px;
+}
+.view .temai .content .content_right a:nth-child(1) h4 {
+  color: #fd3a51;
+  font-size: 14px;
+}
+.view .temai .content .content_right a:nth-child(1) p {
+  font-size: 12px;
+}
+.view .temai .content .content_right a:nth-child(2) {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 5px solid #fff;
+  background: #f9f9f9;
+}
+.view .temai .content .content_right a:nth-child(2) h4 {
+  color: #6aabff;
+  font-size: 14px;
+}
+.view .temai .content .content_right a:nth-child(2) p {
+  font-size: 12px;
+}
+.view .temai .content .content_right a:nth-child(2) img {
+  width: 50px;
+  height: 35px;
+}
+.view .temai .content .content_right a:nth-child(3) {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 5px solid #fff;
+  background: #f9f9f9;
+}
+.view .temai .content .content_right a:nth-child(3) h4 {
+  color: #68d2bc;
+  font-size: 14px;
+}
+.view .temai .content .content_right a:nth-child(3) p {
+  font-size: 12px;
+}
+.view .temai .content .content_right a:nth-child(3) img {
+  width: 50px;
+  height: 35px;
+}
+.view .active {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+.view .active .active_title {
+  display: flex;
+  justify-content: space-between;
+}
+.view .active .active_title h3 {
+  color: #ffa500;
+  font-style: italic;
+  font-size: 16px;
+}
+.view .active .active_title a {
+  background-image: linear-gradient(to right, blue, red);
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 8px;
+}
+.view .active .active_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.view .active .active_content a {
+  width: 50%;
+}
+.view .active .active_content a img {
+  width: 100%;
+}
+.view footer {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0 ;
+}
+.view footer .tel {
+  display: flex;
+}
+.view footer .tel a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.view footer .footer_nav,
+.view footer .copyrigh {
+  text-align: center;
+}
