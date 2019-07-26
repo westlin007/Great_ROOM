@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* 解决点击高亮*/
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.col {
+  color: #c91523;
+}
+.view {
+  background-color: #f5f5f5;
+  color: #666;
+}
+.view .top {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  background: #c91523;
+}
+.view .top h1 {
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.view .top h1 a {
+  width: 56px;
+  height: 20px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: 0 -110px;
+  font-size: 0;
+}
+.view .top .search {
+  flex: 1;
+  padding: 5px 0;
+  position: relative;
+}
+.view .top .search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  text-indent: 25px;
+}
+.view .top .search::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/jd-sprites.png');
+  background-repeat: no-repeat;
+  background-position: -60px -110px;
+  background-size: 200px 200px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+.view .top .login {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+.view .adv {
+  width: 100%;
+  padding: 5px;
+}
+.view .nav {
+  background-color: #fff;
+}
+.view .nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 5px;
+}
+.view .nav ul li a img {
+  width: 50%;
+  margin: 0 auto;
+}
+.view .nav ul li a span {
+  color: #666;
+  font-size: 14px;
+}
+.view .hand_kill {
+  margin: 10px 0;
+  background-color: #fff;
+}
+.view .hand_kill .kill_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.view .hand_kill .kill_title .left {
+  display: flex;
+}
+.view .hand_kill .kill_title .left .clock {
+  display: block;
+  width: 18px;
+  height: 22px;
+  background-image: url(../images/jd-sprites.png);
+  background-repeat: no-repeat;
+  background-position: -83px -110px;
+  background-size: 200px 200px;
+}
+.view .hand_kill .kill_title .left > span:nth-child(2) {
+  margin: 0 15px;
+}
+.view .hand_kill .kill_title .left .time span {
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 0 3px;
+}
+.view .hand_kill .kill_title .left .time span:nth-child(3n) {
+  color: #3d3d3d;
+  background: #fff;
+}
+.view .hand_kill .kill_title > a {
+  font-size: 14px;
+  color: #666;
+}
+.view .hand_kill .kill_content {
+  margin-top: 10px;
+}
+.view .hand_kill .kill_content ul li {
+  float: left;
+  width: 33.33%;
+}
+.view .hand_kill .kill_content ul li a {
+  position: relative;
+}
+.view .hand_kill .kill_content ul li a img {
+  width: 80%;
+  margin: 0 auto;
+}
+.view .hand_kill .kill_content ul li a p {
+  text-align: center;
+}
+.view .hand_kill .kill_content ul li a span {
+  position: absolute;
+  width: 46px;
+  height: 28px;
+  background: #fdb60a;
+  line-height: 28px;
+  color: #fff;
+  top: 50%;
+  right: 20%;
+  border-radius: 50%;
+  text-align: center;
+}
+.view .festival .festival_title {
+  position: relative;
+}
+.view .festival .festival_title ul {
+  position: absolute;
+  bottom: 5px;
+  padding: 0 10px;
+}
+.view .festival .festival_title ul li {
+  float: left;
+  width: 50%;
+}
+.view .festival .festival_content ul li {
+  float: left;
+  width: 50%;
+}
+.view .festival .festival_content ul li:nth-child(-n+3) {
+  width: 33.33%;
+}
+.view .supermarket {
+  background: #fff;
+}
+.view .supermarket .market_title h3 {
+  padding: 10px 5px;
+  font-size: 16px;
+}
+.view .supermarket .market_content ul li {
+  float: left;
+  width: 50%;
+}
+.view .supermarket .market_content ul li:nth-child(2) {
+  padding-bottom: 1px;
+}
+.view .theme {
+  background: #fff;
+}
+.view .theme .theme_title h3 {
+  padding: 5px;
+  font-size: 16px;
+}
+.view .theme .theme_content a {
+  float: left;
+  width: 25%;
+}
+.view .theme .theme_content a:nth-child(-n+2) {
+  width: 50%;
+}
+.view .theme .theme_content a:nth-child(2) {
+  padding-bottom: 1px;
+}
+.view .recommend {
+  background: #fff;
+}
+.view .recommend h3 {
+  font-size: 16px;
+  padding: 5px;
+}
+.view .recommend .recommend_content a {
+  float: left;
+  width: 30%;
+}
+.view .recommend .recommend_content a:nth-child(1) {
+  width: 40%;
+}
+.view .guess {
+  background: #fff;
+}
+.view .guess .guess_title {
+  padding: 5px;
+}
+.view .guess .guess_title h3 {
+  float: left;
+  font-size: 16px;
+}
+.view .guess .guess_title a {
+  float: right;
+  font-size: 14px;
+}
+.view .guess .guess_title a img {
+  display: inline;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.view .guess .guess_content ul li {
+  float: left;
+  padding: 10px;
+  width: 50%;
+}
+.view .guess .guess_content ul li .content_title {
+  display: flex;
+  justify-content: space-between;
+}
+.view .guess .guess_content ul li .content_title a {
+  font-size: 13px;
+  border: #ccc 1px solid;
+}
+.view .guess .guess_content ul li > a {
+  border-bottom: 1px solid #ccc;
+}
+.view .guess .guess_content ul li > a img {
+  width: 80%;
+  margin: 0 auto;
+}
+.view .guess .guess_content ul li > a p {
+  height: 40px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.view footer {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+.view footer .more {
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.view footer .footer_bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.view footer .footer_bar a {
+  width: 25%;
+}
+.view footer .app {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.view footer .app a {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+}
+.view footer .app a span:first-child {
+  width: 33px;
+  height: 33px;
+  background: url(../images/jd-sprites.png) no-repeat -40px -70px;
+  background-size: 200px 200px;
+  margin: 0 auto;
+}
+.view footer .app a:first-child span:first-child {
+  background-position: -120px -70px;
+}
+.view footer .app a:last-child span:first-child {
+  background-position: -80px -70px;
+}
+.view footer .footer_copy {
+  padding: 15px 0;
+}
+.view nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background: #fff;
+}
+.view nav a {
+  width: 20%;
+}
+.view nav a img {
+  width: 57px;
+  margin: 0 auto;
+}
